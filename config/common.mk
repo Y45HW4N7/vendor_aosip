@@ -45,6 +45,7 @@ DEVICE_PACKAGE_OVERLAYS += \
 # Custom packages
 PRODUCT_PACKAGES += \
     BluetoothExt \
+    Jelly \
     LatinIME \
     Launcher3 \
     LiveWallpapers \
@@ -100,16 +101,11 @@ PRODUCT_COPY_FILES += \
 
 # init.d support
 PRODUCT_COPY_FILES += \
-    vendor/aosip/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
-    vendor/aosip/prebuilt/common/bin/sysinit:system/bin/sysinit
+    vendor/aosip/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner
 
 # AOSiP-specific init file
 PRODUCT_COPY_FILES += \
     vendor/aosip/prebuilt/common/etc/init.local.rc:root/init.aosip.rc
-
-# Copy over added mimetype supported in libcore.net.MimeUtils
-PRODUCT_COPY_FILES += \
-    vendor/aosip/prebuilt/common/lib/content-types.properties:system/lib/content-types.properties
 
 # Copy over added mimetype supported in libcore.net.MimeUtils
 PRODUCT_COPY_FILES += \
